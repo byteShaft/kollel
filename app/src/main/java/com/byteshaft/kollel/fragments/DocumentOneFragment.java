@@ -1,4 +1,4 @@
-package com.byteshaft.shiurim.fragments;
+package com.byteshaft.kollel.fragments;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -7,62 +7,35 @@ import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
-import com.byteshaft.shiurim.R;
+import com.byteshaft.kollel.R;
 
-public class DocumentTwoFragment extends Fragment {
+public class DocumentOneFragment extends Fragment {
 
     private View mBaseView;
     private WebView mWebView;
     private TextView tv_network;
     private static ProgressDialog progressDialog;
-    private String url = "https://docs.google.com/document/d/1t22RTWiVOYQxBY1_Xi4Zripyj" +
-            "_XT0qjayv9VvQX-pTg/pub?embedded=true";
-
-    private Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message message) {
-            switch (message.what) {
-                case 1:{
-                    webViewGoBack();
-                }break;
-            }
-        }
-    };
+    private String url = "https://docs.google.com/document/d/1--EOZmSm4mRg_JLQhQgqQEK2B8zuxa361" +
+            "ume8Ji_E0o/pub?embedded=true";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mBaseView = inflater.inflate(R.layout.doc_two_fragment, container, false);
-        tv_network = (TextView) mBaseView.findViewById(R.id.tv_contact);
-        mWebView = (WebView) mBaseView.findViewById(R.id.contact_us_webview);
-        mWebView.setWebViewClient(new CustomWebView());
+        mBaseView = inflater.inflate(R.layout.doc_one_fragment, container, false);
+
+        tv_network = (TextView) mBaseView.findViewById(R.id.tv_shi);
+        mWebView = (WebView) mBaseView.findViewById(R.id.shiurim_webview);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setBuiltInZoomControls(true);
         mWebView.getSettings().setDisplayZoomControls(false);
         mWebView.loadUrl(url);
-        mWebView.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (keyCode == KeyEvent.KEYCODE_BACK
-                        && event.getAction() == MotionEvent.ACTION_UP
-                        && mWebView.canGoBack()) {
-                    handler.sendEmptyMessage(1);
-                    return true;
-                }
-                return false;
-            }
-        });
 
         if (isNetworkAvailable()) {
             mWebView.loadUrl(url);
@@ -71,10 +44,6 @@ public class DocumentTwoFragment extends Fragment {
             tv_network.setVisibility(View.VISIBLE);
         }
         return mBaseView;
-    }
-
-    private void webViewGoBack(){
-        mWebView.goBack();
     }
 
     public boolean isNetworkAvailable() {
@@ -104,7 +73,7 @@ public class DocumentTwoFragment extends Fragment {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-//            showProgressDialog( getActivity() , "Loading...");
+            showProgressDialog( getActivity() , "Loading...");
             view.loadUrl(url);
             return true;
         }
@@ -116,7 +85,7 @@ public class DocumentTwoFragment extends Fragment {
 
         @Override
         public void onPageFinished(WebView view, String url) {
-//            dismissProgressDialog();
+            dismissProgressDialog();
 
         }
     }

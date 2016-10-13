@@ -1,18 +1,15 @@
-package com.byteshaft.shiurim;
+package com.byteshaft.kollel;
 
-import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.byteshaft.shiurim.fragments.CalendarFragment;
-import com.byteshaft.shiurim.fragments.DocumentOneFragment;
-import com.byteshaft.shiurim.fragments.DocumentTwoFragment;
-import com.byteshaft.shiurim.fragments.TweetOneFragment;
-import com.byteshaft.shiurim.fragments.TweetTwoFragment;
+import com.byteshaft.kollel.fragments.CalendarFragment;
+import com.byteshaft.kollel.fragments.DocumentOneFragment;
+import com.byteshaft.kollel.fragments.DocumentTwoFragment;
+import com.byteshaft.kollel.fragments.TweetOneFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -51,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (tabId == R.id.tab_document_two) {
                     loadFragment(new DocumentTwoFragment());
-
-                } else if (tabId == R.id.tab_tweets_two) {
-                    loadFragment(new TweetTwoFragment());
                 }
             }
         });

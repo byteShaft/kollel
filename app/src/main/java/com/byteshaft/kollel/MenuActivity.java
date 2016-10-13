@@ -1,8 +1,6 @@
-package com.byteshaft.shiurim;
+package com.byteshaft.kollel;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,14 +27,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         mShi = (Button) findViewById(R.id.button_shiurim);
         mUpdate = (Button) findViewById(R.id.button_update);
         mContact = (Button) findViewById(R.id.button_contact);
-        mAds = (Button) findViewById(R.id.button_ads);
+//        mAds = (Button) findViewById(R.id.button_ads);
 
         mMin.setOnClickListener(this);
         mShi.setOnClickListener(this);
         mUpdate.setOnClickListener(this);
         mContact.setOnClickListener(this);
-        mAds.setOnClickListener(this);
-
     }
 
     @Override
@@ -66,11 +62,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intentFour);
                 break;
 
-            case R.id.button_ads:
-                Intent intentFive = new Intent(MenuActivity.this, MainActivity.class);
-                intentFive.putExtra("key", ads);
-                startActivity(intentFive);
-                break;
+//            case R.id.button_ads:
+//                Intent intentFive = new Intent(MenuActivity.this, MainActivity.class);
+//                intentFive.putExtra("key", ads);
+//                startActivity(intentFive);
+//                break;
         }
     }
 }

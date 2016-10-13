@@ -3,32 +3,33 @@
     <tab
         id="@+id/tab_calender"
         icon="@mipmap/ic_cal"
-        inActiveColor="#ffffff"
-        activeColor="#ebd093"
+        inActiveColor="#000000"
+        activeColor="#ffffff"
         title="Minyanim" />
     <tab
         id="@+id/tab_document"
-        icon="@mipmap/ic_doc"
-        inActiveColor="#ffffff"
-        activeColor="#ebd093"
+        icon="@mipmap/ic_book"
+        inActiveColor="#000000"
+        activeColor="#ffffff"
         title="Shiurim" />
     <tab
         id="@+id/tab_tweets_one"
         icon="@mipmap/ic_twitter"
-        inActiveColor="#ffffff"
-        activeColor="#ebd093"
+        inActiveColor="#000000"
+        activeColor="#ffffff"
         title="Updates" />
 
     <tab
         id="@+id/tab_document_two"
         icon="@mipmap/ic_contact"
-        inActiveColor="#ffffff"
-        activeColor="#ebd093"
+        inActiveColor="#000000"
+        activeColor="#ffffff"
         title="Contact Us" />
-    <tab
-        id="@+id/tab_tweets_two"
-        icon="@mipmap/ic_twitter"
-        inActiveColor="#ffffff"
-        activeColor="#ebd093"
-        title="Ads" />
+
+    <!--<tab-->
+        <!--id="@+id/tab_tweets_two"-->
+        <!--icon="@mipmap/ic_twitter"-->
+        <!--inActiveColor="#455A64"-->
+        <!--activeColor="#ffffff"-->
+        <!--title="Ads" />-->
 </tabs>

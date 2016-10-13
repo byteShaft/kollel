@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.byteshaft.shiurim.MainActivity">
+    tools:context="com.byteshaft.kollel.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -24,7 +24,7 @@
 
             <TextView
                 android:id="@+id/tv"
-                android:text="Mishkan Torah"
+                android:text="Kollel Ohr Haemet"
                 android:textColor="@color/golden"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:text="Valley Community Kollel"
+                android:text="The Torah Learning Center of Great Neck"
                 android:textColor="@color/golden"
                 android:textSize="16sp"
                 android:gravity="center"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.byteshaft.shiurim">
+    package="com.byteshaft.kollel">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.byteshaft.kollel.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashScreen"
+            android:name="com.byteshaft.kollel.SplashScreen"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
@@ -33,7 +33,7 @@
             android:name="io.fabric.ApiKey"
             android:value="55e5028755e7c078a8db73ffd5393c3b0060fe2b" />
 
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name="com.byteshaft.kollel.MenuActivity"></activity>
     </application>
 
 </manifest>

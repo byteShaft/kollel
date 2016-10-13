@@ -1,4 +1,5 @@
-package com.byteshaft.shiurim.fragments;
+package com.byteshaft.kollel.fragments;
+
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -7,8 +8,6 @@ import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,23 +15,24 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
-import com.byteshaft.shiurim.R;
+import com.byteshaft.kollel.R;
 
-public class DocumentOneFragment extends Fragment {
+public class CalendarFragment extends android.support.v4.app.Fragment {
 
     private View mBaseView;
     private WebView mWebView;
     private TextView tv_network;
     private static ProgressDialog progressDialog;
-    private String url = "https://docs.google.com/document/d/1gz-3ItIZBeoH0CbENBw" +
-            "_Bot6Ff7ZztQy2TYH5CaQiAQ/pub?embedded=true";
-
+    private String url = "https://calendar.google.com/calendar/embed?showPrint=0&showTz=0&mode=" +
+            "AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=" +
+            "pbqvjuhc48ise17fi2890j2lfk%40group.calendar.google.com&color=%23182C57&ctz=" +
+            "America%2FNew_York";
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mBaseView = inflater.inflate(R.layout.doc_one_fragment, container, false);
-
-        tv_network = (TextView) mBaseView.findViewById(R.id.tv_shi);
-        mWebView = (WebView) mBaseView.findViewById(R.id.shiurim_webview);
+        mBaseView = inflater.inflate(R.layout.calendar_fragment, container, false);
+        tv_network = (TextView) mBaseView.findViewById(R.id.tv_cal);
+        mWebView = (WebView) mBaseView.findViewById(R.id.cal_webview);
         mWebView.setWebViewClient(new CustomWebView());
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setBuiltInZoomControls(true);
